@@ -3,8 +3,8 @@
       <div class="row">
         <div class="col s4">
           <form ng-submit="login(users)">
-            <input type="text" ng-model="users.user" value="Username" placeholder="username">
-            <input type="text" ng-model="users.password" value="Password" placeholder="password">
+            <input type="text" ng-model="users.user" value="Username" placeholder="username" required>
+            <input type="text" ng-model="users.password" value="Password" placeholder="password" required>
             <input type="submit" value="login">
           </form>
         </div>
