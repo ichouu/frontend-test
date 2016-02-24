@@ -1,0 +1,25 @@
+<div class="container" ng-controller="guestbookController">
+  <table>
+    <thead>
+      <th>User</th>
+      <th>Phone</th>
+      <th>Message</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="result in result">
+        <td ng-bind="result.user"></td>
+        <td ng-bind="result.phone"></td>
+        <td ng-bind="result.message"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="form">
+    <span>Add a message</span>
+    <form ng-submit="write(msgs)">
+      <input type="text" ng-model="msgs.phone" value="phone" placeholder="phone">
+      <input type="text" ng-model="msgs.message" value="msg" placeholder="msg">
+      <input type="submit" value="submit">
+    </form>
+  </div>
+</div>

@@ -2,6 +2,7 @@
 var fs=require('fs');
 var express=require('express');
 var app=express();
+var path = require("path");
 var cookieParser=require('cookie-parser');
 var bodyParser=require('body-parser');
 
@@ -21,6 +22,9 @@ var msgs=[
 
 app.use(cookieParser());
 app.use(bodyParser.json());
+
+// set up a static file server that points to the "client" directory
+app.use(express.static(path.join(__dirname, './client')));
 
 function sendUnauthorized(response) {
     response.status(401);
@@ -112,6 +116,7 @@ app.get('/secret', function(request, response) {
 
 app.post('/write', function(request, response) {
     var user = request.cookies.login;
+    console.log(user);
     if (users[user] === undefined) {
         return sendUnauthorized(response);
     }

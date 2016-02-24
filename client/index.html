@@ -1,0 +1,33 @@
+<html ng-app="myApp">
+  <head>
+    <title>Front End Test</title>
+    <!-- Compiled and minified CSS -->
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+	  <!-- Compiled and minified JavaScript -->
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <script type="text/javascript" src='https://code.angularjs.org/1.4.8/angular.js'></script>
+    <script type="text/javascript" src='https://code.angularjs.org/1.4.8/angular-route.min.js'></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controllers/loginController.js"></script>
+    <script type="text/javascript" src="js/factories/userFactory.js"></script>
+    <script type="text/javascript" src="js/controllers/homeController.js"></script>
+    <script type="text/javascript" src="js/factories/homeFactory.js"></script>
+    <script type="text/javascript" src="js/controllers/abbrevController.js"></script>
+    <script type="text/javascript" src="js/factories/abbrevFactory.js"></script>
+    <script type="text/javascript" src="js/controllers/guestbookController.js"></script>
+    <script type="text/javascript" src="js/factories/guestbookFactory.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+    <!-- Create Partials for Viewing of States -->
+      <p id="partials">
+        <a class="btn" href="#/">Login/Logout</a> | <a class="btn" href="#home">Home</a> | <a class="btn" href="#/guestbook">Guest Book</a>
+      </p>
+      <!-- Create div for view (angular will fill in) -->
+      <div ng-view="">
+
+      </div>
+    </div>
+  </body>
+</html>

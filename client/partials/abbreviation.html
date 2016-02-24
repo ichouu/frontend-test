@@ -1,0 +1,32 @@
+<div class="container" ng-controller="abbrevController">
+  <div class="row">
+    <div >
+      <table>
+        <thead>
+          <th>Name</th>
+          <th>Abbreviation</th>
+          <th>Capital</th>
+          <th>most-populous-city</th>
+          <th>population</th>
+          <th>square-miles</th>
+          <th>time-zone-1</th>
+          <th>time-zone-2</th>
+          <th>dst</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span ng-bind="result.name"></span></td>
+            <td><a ng-href="#/result/{{result.abbreviation}}"><span ng-bind="result.abbreviation"></span></td>
+            <td><span ng-bind="result.capital"></span></td>
+            <td><span ng-bind="result.most-populous-city"></span></td>
+            <td><span ng-bind="result.population"></span></td>
+            <td><span ng-bind="result.square-miles"></span></td>
+            <td><span ng-bind="result.time-zone-1"></span></td>
+            <td><span ng-bind="result.time-zone-2"></span></td>
+            <td><span ng-bind="result.dst"></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
